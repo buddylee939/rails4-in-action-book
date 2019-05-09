@@ -1,24 +1,5 @@
-# README
+# Things we did
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- simple form, bootstrap, changed class for initializers span
+- rspec testing
+- styled buttons via extends in the scss, rather than adding the class straight to the buttons
