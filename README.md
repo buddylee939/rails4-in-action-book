@@ -23,4 +23,7 @@ Finally, there are two options that work similarly—:restrict_with_error and :r
 ```
   config.include Warden::Test::Helpers, type: :feature
   config.after(type: :feature) { Warden.test_reset! }
-```  
+```
+
+- used devise
+- 
