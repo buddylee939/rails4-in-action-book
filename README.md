@@ -55,3 +55,6 @@ end
 Why do you need to do this? Because Rails’ automatic inference will try to apply a for- eign key on your tickets table, pointing to an authors table—and you don’t have a ticket table. The author will be a User, living in the users table, so you need to spe- cifically tell Rails that the foreign key should point to the users table instead (but still use the author_id field to do so.)
 
 ```
+
+- allowing users to be admins
+- 
