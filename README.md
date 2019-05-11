@@ -26,4 +26,32 @@ Finally, there are two options that work similarly—:restrict_with_error and :r
 ```
 
 - used devise
-- 
+- gave users an 'author' title, instead of user, in the user.rb
+
+```
+belongs_to :author, class_name: "User"
+```
+
+- then added a migration to add author references to the tickets
+
+```
+rails g migration add_author_to_tickets author:references
+```
+
+- then we changed the migration to change the author id
+
+```
+class AddAuthorToTickets < ActiveRecord::Migration[5.2]
+  def change
+    add_reference :tickets, :author, index: true
+    add_foreign_key :tickets, :users, column: :author_id
+  end
+end
+```
+
+- the reason is
+
+```
+Why do you need to do this? Because Rails’ automatic inference will try to apply a for- eign key on your tickets table, pointing to an authors table—and you don’t have a ticket table. The author will be a User, living in the users table, so you need to spe- cifically tell Rails that the foreign key should point to the users table instead (but still use the author_id field to do so.)
+
+```
