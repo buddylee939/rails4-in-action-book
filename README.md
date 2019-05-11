@@ -57,4 +57,25 @@ Why do you need to do this? Because Rails’ automatic inference will try to app
 ```
 
 - allowing users to be admins
+- seeded the database
+- generated namespaced controllers for admins: page 199
+
+```
+rails g controller admin/application index
+```
+
+- and the route, set to admin root
+
+```
+  namespace :admin do
+    root "application#index"
+  end
+```
+
+- testing the namespace
+
+```
+Feature specs are great for defining and testing a series of actions that a user can perform in your application, but control- ler specs are much better for quickly testing singular points, such as whether a user can go to a specific action in a controller.
+```
+
 - 
