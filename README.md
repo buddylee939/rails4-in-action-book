@@ -1,5 +1,15 @@
 # Things we did
 
+- from page 231
+
+```
+Member routes vs. collection routes
+When you’re looking at defining custom routes outside the normal seven RESTful routes, you’ll come across these terms: member routes and collection routes. The difference can often be confusing for people learning Rails—which type do you use, and when?
+Collection routes are typically used when you want to perform an action on a group of model instances. index is an example of a collection route—other examples might be search, or autocomplete, or export. These routes will generate URLs like /projects/search or /projects/export.
+Member routes are typically used when you want to perform an action on a single model instance. edit, update, and destroy are all examples of member routes— they first find an instance of a model, and then take some action on it. Other exam- ples might be archive, or approve, or preview. These routes will generate URLs like /projects/1/archive or /projects/3/approve.
+```
+
+
 - simple form, bootstrap, changed class for initializers span
 - rspec testing
 - styled buttons via extends in the scss, rather than adding the class straight to the buttons

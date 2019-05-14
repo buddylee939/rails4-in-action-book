@@ -7,4 +7,9 @@ class User < ApplicationRecord
     "#{email} (#{admin? ? "Admin" : "User"})"
   end
 
+  def archive
+    self.update(archived_at: Time.now)
+  end
+
+  scope :excluding_archived, lambda { where(archived_at: nil) }
 end
