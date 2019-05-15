@@ -9,10 +9,11 @@ class ProjectsController < ApplicationController
     authorize @project, :show?
   end
 
-  def edit 
+  def edit
+    authorize @project, :update?
   end
-
   def update
+    authorize @project, :update?
     if @project.update(project_params)
       flash[:notice] = "Project has been updated."
       redirect_to @project
@@ -21,6 +22,7 @@ class ProjectsController < ApplicationController
       render "edit"
     end
   end
+
   private
     def set_project
       @project = Project.find(params[:id])
