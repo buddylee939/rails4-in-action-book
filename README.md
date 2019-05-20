@@ -1,5 +1,16 @@
 # Things we did
 
+- good way to break down todos for a new app, based on the default 7 CRUD actions of a resource
+
+```
+For the seven default CRUD actions for a Rails model, you’ve implemented the fol- lowing authorizations:
+- Anyone can view the index action, but they will only see projects they are a member of.
+- Only admins can see the new and create actions.
+- Only members of a project can see the show action.
+- Only admins, or managers of a project, can see the edit and update actions.
+- Only admins can see the destroy action.
+```
+
 - from page 231
 
 ```
