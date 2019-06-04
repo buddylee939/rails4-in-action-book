@@ -2,7 +2,7 @@
 
 - good way to break down todos for a new app, based on the default 7 CRUD actions of a resource
 
-```
+```ruby
 For the seven default CRUD actions for a Rails model, you’ve implemented the fol- lowing authorizations:
 - Anyone can view the index action, but they will only see projects they are a member of.
 - Only admins can see the new and create actions.
@@ -13,7 +13,7 @@ For the seven default CRUD actions for a Rails model, you’ve implemented the f
 
 - from page 231
 
-```
+```ruby
 Member routes vs. collection routes
 When you’re looking at defining custom routes outside the normal seven RESTful routes, you’ll come across these terms: member routes and collection routes. The difference can often be confusing for people learning Rails—which type do you use, and when?
 Collection routes are typically used when you want to perform an action on a group of model instances. index is an example of a collection route—other examples might be search, or autocomplete, or export. These routes will generate URLs like /projects/search or /projects/export.
@@ -26,7 +26,7 @@ Member routes are typically used when you want to perform an action on a single 
 - styled buttons via extends in the scss, rather than adding the class straight to the buttons
 - used dependent delete all instead of destroy
 
-```
+```ruby
 has_many :tickets, dependent: :delete_all
 ```
 
