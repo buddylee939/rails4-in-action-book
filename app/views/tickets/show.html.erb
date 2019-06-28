@@ -28,4 +28,14 @@
     </ul>
   </header>
   <%= simple_format(@ticket.description) %>
+  <% if @ticket.attachment.attached? %>
+    <h4>Attachment</h4>
+    <div class="attachment">
+      <p>
+        <%= link_to File.basename(url_for(@ticket.attachment)),
+          @ticket.attachment %>
+       (<%= number_to_human_size(@ticket.attachment.byte_size) %>)
+      </p> 
+    </div>
+  <% end %>  
 </div>
