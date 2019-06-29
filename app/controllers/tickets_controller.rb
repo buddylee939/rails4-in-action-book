@@ -20,6 +20,7 @@ class TicketsController < ApplicationController
       redirect_to [@project, @ticket]
     else
       flash.now[:alert] = "Ticket has not been created."
+      @attachment = params[:ticket][:attachment] if params[:ticket][:attachment].present?
       render "new"
     end 
   end

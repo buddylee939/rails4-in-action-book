@@ -1,6 +1,8 @@
 <%= simple_form_for([project, ticket]) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
+  <%= f.hidden_field :attachment, class: 'ticket-attachment', value: f.object.attachment.signed_id if f.object.attachment.attached? %>
   <%= f.input :attachment, as: :file, label: "File" %>
+  <%#= f.input :attachment_cache %>
   <%= f.button :submit, class: "btn-primary" %>
 <% end %>
